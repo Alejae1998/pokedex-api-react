@@ -42,8 +42,8 @@ function App() {
           pokemons.map(({ pokemon, height, weight, url_image }, i) => (
             <div key={pokemon + i}>
               <h2>Pokename: {pokemon}</h2>
-              <p>Height: {height} feet</p>
-              <p>Weight: {weight} pounds</p>
+              <p>Height: {height} pokefeet</p>
+              <p>Weight: {weight} pokepounds</p>
               <img src={url_image} />
             </div>
           ))
