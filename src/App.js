@@ -9,7 +9,7 @@ function App() {
 
   async function load() {
     setIsLoading(true);
-    console.log('pokemon');
+    // console.log('pokemon');
     const {
       data: { results },
     } = await getPokemons(query);
@@ -41,9 +41,9 @@ function App() {
         ) : (
           pokemons.map(({ pokemon, height, weight, url_image }, i) => (
             <div key={pokemon + i}>
-              <h2>Name: {pokemon}</h2>
-              <p>Height: {height}</p>
-              <p>Weight: {weight}</p>
+              <h2>Pokename: {pokemon}</h2>
+              <p>Height: {height} feet</p>
+              <p>Weight: {weight} pounds</p>
               <img src={url_image} />
             </div>
           ))
