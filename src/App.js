@@ -9,7 +9,7 @@ function App() {
 
   async function load() {
     setIsLoading(true);
-
+    console.log('pokemon');
     const {
       data: { results },
     } = await getPokemons(query);
