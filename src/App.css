@@ -1,5 +1,17 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+.App,
+body,
+html,
+#root {
+  background-color: white;
   text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .App-logo {
@@ -12,7 +24,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,6 +46,31 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+section {
+  width: 30%;
+  height: 100%;
+}
+
+.yelp {
+  background-color: rgb(98, 158, 211);
+}
+
+.weather {
+  background-color: rgb(140, 187, 203);
+}
+
+.pokemon {
+  background-color: rgb(244, 230, 141);
+}
+
+section li {
+  list-style: none;
+}
+
+label {
+  display: block;
 }
 
 img {
