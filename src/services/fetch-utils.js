@@ -1,6 +1,6 @@
 export async function getPokemons(searchFilter) {
   const rawResponse = await fetch(
-    `http://localhost:8888/.netlify/functions/pokemon?searchFilter=${searchFilter}`
+    `/.netlify/functions/pokemon?searchFilter=${searchFilter}`
   );
   const data = await rawResponse.json();
 
@@ -10,7 +10,7 @@ export async function getPokemons(searchFilter) {
 export async function getYelpData(searchFilter) {
   
   const rawResponse = await fetch(
-    `http://localhost:8888/.netlify/functions/yelp?searchFilter=${searchFilter}`
+    `/.netlify/functions/yelp?searchFilter=${searchFilter}`
   );
 
   const data = await rawResponse.json();
@@ -20,7 +20,7 @@ export async function getYelpData(searchFilter) {
 
 export async function getWeatherData(searchFilter) {
   const rawResponse = await fetch(
-    `http://localhost:8888/.netlify/functions/weather?searchFilter=${searchFilter}`
+    `/.netlify/functions/weather?searchFilter=${searchFilter}`
   );
   const data = await rawResponse.json();
 
