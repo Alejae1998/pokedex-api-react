@@ -1,12 +1,9 @@
-export async function getPokemons(name) {
-  const rawResponse = await fetch(
-    `http://localhost:8888/.netlify/functions/pokemon?name=${name}`
-  );
+export async function getPokemons(searchFilter) {
+  const rawResponse = await fetch(`/.netlify/functions/pokemon?searchFilter=${searchFilter}`);
   const data = await rawResponse.json();
 
   return data;
 }
-
 
 export async function getYelpData(searchFilter) {
   const rawResponse = await fetch(`/.netlify/functions/yelp?searchFilter=${searchFilter}`);
