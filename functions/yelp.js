@@ -6,20 +6,24 @@ const headers = {
   'Access-Control-Allow-Headers': 'Content-Type',
   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
 };
-
 // eslint-disable-next-line no-unused-vars
 exports.handler = async (event, context) => {
+  
   try {
     const response = await fetch(
-      `https://pokedex-alchemy.herokuapp.com/api/pokedex?pokemon=${event.queryStringParameters.searchFilter}`
+      `https://api.yelp.com/v3/businesses/search?location=${event.queryStringParameters.searchFilter}`,
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.YELP_KEY}`,
+        },
+      }
     );
     const data = await response.json();
-    const json = JSON.stringify({ data });
 
     return {
       statusCode: 200,
       headers,
-      body: json,
+      body: JSON.stringify({ data }),
     };
   } catch (error) {
     // eslint-disable-next-line no-console
