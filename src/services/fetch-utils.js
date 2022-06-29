@@ -8,7 +8,7 @@ export async function getPokemons(searchFilter) {
 }
 
 export async function getYelpData(searchFilter) {
-  console.log(searchFilter);
+  
   const rawResponse = await fetch(
     `http://localhost:8888/.netlify/functions/yelp?searchFilter=${searchFilter}`
   );
