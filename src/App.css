@@ -33,9 +33,9 @@ html,
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
+* .App-link {
   color: #61dafb;
 }
 
@@ -51,6 +51,7 @@ html,
 section {
   width: 30%;
   height: 100%;
+  overflow: scroll;
 }
 
 .yelp {
